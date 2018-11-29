@@ -1,4 +1,5 @@
 FROM devopsedu/webapp
-CMD apachectl -D FOREGROUND
-RUN rm /var/www/html/index.html
 ADD website /var/www/html
+RUN ls -all /var/www/html
+RUN rm /var/www/html/index.html
+CMD apachectl -D FOREGROUND
